@@ -32,7 +32,8 @@
 // LED controller chip via a serial connection.
 // This name might change, if you use a different controller.
 // Could be also ttyUSB*
-#define LED_USB_CONTROLLER_DEV "/dev/ttyACM0"
+// #define LED_USB_CONTROLLER_DEV "/dev/ttyACM0"
+#define LED_USB_CONTROLLER_DEV "/dev/ttyUSB0"
 
 // Uncomment the line below if your
 // matrix orienation is flipped from left to right
