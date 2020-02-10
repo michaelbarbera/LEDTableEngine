@@ -61,12 +61,13 @@ void Tetris::initialize(BaseController *ctrl) {
     BaseApplication::initialize(ctrl);
     m_colorPalette = {
         {   0,   0,   0 },        // Background
-        {   0,   0, 255 },        // Color 1
-        {   0, 255,   0 },        // Color 2
-        { 255,   0,   0 },        // Color 3
-        { 255, 255,   0 },        // Color 4
-        {   0, 255, 255 },        // Color 5
-        { 255,   0, 255 },        // Color 6
+        { 255, 255,   0 },        // yellow (index 1)
+        { 255, 150,   0 },        // orange
+        {   0,   0, 255 },        // blue
+        { 255,   0,   0 },        // red
+        {   0, 255,   0 },        // green
+        { 150,   0, 255 },        // purple
+        {   0, 255, 255 },        // cyan
     };
 
     fillPalette(m_colorPalette);
@@ -265,7 +266,8 @@ void Tetris::draw(Image& frame) {
 void Tetris::newShape() {
     int shapeIdx = m_posDist(m_generator) % shapes.size();
     int posX     = 3 + m_posDist(m_generator) % (m_ctrl->getWidth() - 6);
-    int colIdx   = 1 + m_posDist(m_generator) % 6;
+    // int colIdx   = 1 + m_posDist(m_generator) % 6;
+    int colIdx   = 1 + shapeIdx % 7;
 
     m_fallingShape.update(shapes[shapeIdx], colIdx);
     m_fallingShape.translate(posX, -3);
