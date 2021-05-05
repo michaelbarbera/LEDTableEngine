@@ -1,0 +1,1 @@
+code originally written with an older version of i2c tools so this file needs to go to "/usr/include/linux/i2c-dev.h"

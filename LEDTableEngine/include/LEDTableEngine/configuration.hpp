@@ -1,6 +1,6 @@
 #ifndef CONFIGURATION_H_
 #define CONFIGURATION_H_
-
+ 
 // ////////////////////////////////////
 // General Settings
 // ////////////////////////////////////
@@ -35,6 +35,9 @@
 // #define LED_USB_CONTROLLER_DEV "/dev/ttyACM0"
 #define LED_USB_CONTROLLER_DEV "/dev/ttyUSB0"
 
+// // Allow controller use through I2C
+// #define LED_HAVE_I2C_H_
+
 // Uncomment the line below if your
 // matrix orienation is flipped from left to right
 //#define LED_MATRIX_FLIP_X
@@ -68,7 +71,7 @@
 #define I2C_CTRL_ADR_START 0x20
 
 // End adress for the device scan
-#define I2C_CTRL_ADR_END 0x27
+#define I2C_CTRL_ADR_END 0x40
 
 // ////////////////////////////////////
 // Key-Mappings

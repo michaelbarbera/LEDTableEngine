@@ -11,7 +11,7 @@
 # Set to an empty string "" if you don't want
 # to use controllers
 # e.g. /dev/i2c-1
-i2cDev=""
+i2cDev="/dev/i2c-1"
 
 # The keyboard device file, that has to be used
 # Set to an empty string "" if you don't want

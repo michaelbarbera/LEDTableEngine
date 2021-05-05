@@ -29,6 +29,8 @@
 #include "LEDTableApps/shutdownApp.hpp"
 #include "LEDTableApps/tMP2FilePlayer.hpp"
 
+#define LED_HAVE_I2C_H_
+
 extern char *optarg;
 extern int optind, opterr, optopt;
 
